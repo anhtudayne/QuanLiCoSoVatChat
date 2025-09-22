@@ -1,0 +1,14 @@
+C:\Users\admin\source\repos\DBMS\DBMS\bin\Debug\DBMS.exe.config
+C:\Users\admin\source\repos\DBMS\DBMS\bin\Debug\DBMS.exe
+C:\Users\admin\source\repos\DBMS\DBMS\bin\Debug\DBMS.pdb
+C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.Properties.Resources.resources
+C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.exe
+C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.pdb
+C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.MainForm.resources
+C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.QuanLyNhanVienForm.resources
+C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.EditEmployeeForm.resources
+C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.SearchEmployeeForm.resources
+C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.ViewSalaryForm.resources

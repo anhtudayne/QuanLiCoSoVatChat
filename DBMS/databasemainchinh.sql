@@ -1,0 +1,137 @@
+USE vc;
+GO
+
+-- 1. BẢNG LOẠI CSVC
+CREATE TABLE LoaiCSVC (
+    LoaiID INT IDENTITY PRIMARY KEY,
+    TenLoai NVARCHAR(100) NOT NULL UNIQUE,
+    MoTa NVARCHAR(200)
+);
+GO
+
+-- 2. BẢNG VỊ TRÍ
+CREATE TABLE ViTri (
+    ViTriID INT IDENTITY PRIMARY KEY,
+    Tang INT NOT NULL,
+    KhuVuc NVARCHAR(100) NOT NULL,
+    MoTa NVARCHAR(200)
+);
+GO
+
+-- 3. BẢNG NHÂN VIÊN (đã gộp chức vụ)
+CREATE TABLE NhanVien (
+    NhanVienID INT IDENTITY PRIMARY KEY,
+    HoTen NVARCHAR(100) NOT NULL,
+    NgaySinh DATE,
+    GioiTinh NVARCHAR(10),
+    DiaChi NVARCHAR(200),
+    SoDienThoai VARCHAR(20),
+    Email NVARCHAR(100) UNIQUE,
+    TrangThai NVARCHAR(20) DEFAULT N'Đang làm',
+    ChucVu NVARCHAR(50) NOT NULL -- gộp từ bảng ChucVu
+);
+GO
+
+-- 4. BẢNG THÔNG TIN LƯƠNG NHÂN VIÊN
+CREATE TABLE ThongTinLuongNhanVien (
+    LuongID INT IDENTITY PRIMARY KEY,
+    NhanVienID INT,
+    Thang INT NOT NULL,
+    Nam INT NOT NULL,
+    LuongCoBanTheoGio DECIMAL(18,2) NOT NULL,
+    CONSTRAINT FK_Luong_NhanVien FOREIGN KEY (NhanVienID) REFERENCES NhanVien(NhanVienID) ON DELETE CASCADE,
+    CONSTRAINT CK_Luong_LuongCoBan CHECK (LuongCoBanTheoGio >= 0),
+    CONSTRAINT UQ_LuongThang UNIQUE (NhanVienID, Thang, Nam)
+);
+GO
+
+-- 5. BẢNG CƠ SỞ VẬT CHẤT (đã gộp NhaCungCap và Tình Trạng)
+CREATE TABLE CSVC (
+    CSVCID INT IDENTITY PRIMARY KEY,
+    TenCSVC NVARCHAR(100) NOT NULL,
+    MaCSVC VARCHAR(50) UNIQUE,
+    LoaiID INT,
+    ViTriID INT,
+    GiaTri DECIMAL(18,2),
+    -- Gộp thông tin nhà cung cấp
+    TenNhaCungCap NVARCHAR(100),
+    SoDienThoaiNCC VARCHAR(20),
+    EmailNCC NVARCHAR(100),
+    -- Gộp tình trạng
+    TinhTrang NVARCHAR(50) NOT NULL DEFAULT N'Đang sử dụng',
+    GhiChu NVARCHAR(500),
+    CONSTRAINT FK_CSVC_Loai FOREIGN KEY (LoaiID) REFERENCES LoaiCSVC(LoaiID) ON DELETE SET NULL,
+    CONSTRAINT FK_CSVC_ViTri FOREIGN KEY (ViTriID) REFERENCES ViTri(ViTriID) ON DELETE SET NULL,
+    CONSTRAINT CK_CSVC_GiaTri CHECK (GiaTri >= 0)
+);
+GO
+
+-- 6. BẢNG PHÂN CÔNG CA (đã gộp CaTruc)
+CREATE TABLE PhanCongCa (
+    PhanCongID INT IDENTITY PRIMARY KEY,
+    NhanVienID INT,
+    TenCa NVARCHAR(50) NOT NULL,
+    GioBatDau TIME NOT NULL,
+    GioKetThuc TIME NOT NULL,
+    NgayLamViec DATE NOT NULL,
+    VaiTroTrongCa NVARCHAR(20) NOT NULL DEFAULT N'Nhân viên trực',
+    GhiChu NVARCHAR(200),
+    CONSTRAINT FK_PhanCong_NhanVien FOREIGN KEY (NhanVienID) REFERENCES NhanVien(NhanVienID) ON DELETE CASCADE
+    
+);
+GO
+
+-- 7. BẢNG THÔNG TIN SỬ DỤNG VÀ BẢO HÀNH (chuyển NgayMua vào đây)
+CREATE TABLE ThongTinSuDung (
+    CSVCID INT PRIMARY KEY,
+    NgayMua DATE NOT NULL,
+    NgayHetBaoHanh DATE,
+    ThoiGianSuDungDuKien_Thang INT,
+    GhiChu NVARCHAR(200),
+    CONSTRAINT FK_ThongTinSuDung_CSVC FOREIGN KEY (CSVCID) REFERENCES CSVC(CSVCID) ON DELETE CASCADE
+);
+GO
+
+-- 8. BẢNG LỊCH SỬ BẢO TRÌ
+CREATE TABLE LichSuBaoTri (
+    BaoTriID INT IDENTITY PRIMARY KEY,
+    CSVCID INT,
+    NgayYeuCau DATE NOT NULL DEFAULT GETDATE(),
+    NgayHoanThanh DATE,
+    NoiDung NVARCHAR(500),
+    ChiPhi DECIMAL(18,2),
+    NhanVienGiamSatID INT,
+    NhanVienKyThuatID INT,
+    TrangThai NVARCHAR(50) DEFAULT N'Chờ xử lý',
+    CONSTRAINT FK_LichSuBaoTri_CSVC FOREIGN KEY (CSVCID) REFERENCES CSVC(CSVCID) ON DELETE CASCADE,
+    CONSTRAINT FK_LichSuBaoTri_NhanVien FOREIGN KEY (NhanVienGiamSatID) REFERENCES NhanVien(NhanVienID) ON DELETE SET NULL,
+    CONSTRAINT FK_LichSuBaoTri_NhanVienKyThuat FOREIGN KEY (NhanVienKyThuatID) REFERENCES NhanVien(NhanVienID) ON DELETE NO ACTION,
+    CONSTRAINT CK_BaoTri_ChiPhi CHECK (ChiPhi >= 0)
+);
+GO
+
+-- 9. BẢNG LỊCH BẢO TRÌ ĐỊNH KỲ
+CREATE TABLE LichBaoTri (
+    LichID INT IDENTITY PRIMARY KEY,
+    CSVCID INT,
+    ChuKyBaoTri_Thang INT NOT NULL DEFAULT 6,
+    NgayBatDau DATE NOT NULL,
+    NgayKeTiep AS (DATEADD(month, ChuKyBaoTri_Thang, NgayBatDau)),
+    GhiChu NVARCHAR(200),
+    CONSTRAINT FK_LichBaoTri_CSVC FOREIGN KEY (CSVCID) REFERENCES CSVC(CSVCID) ON DELETE CASCADE
+);
+GO
+
+-- 10. BẢNG THANH LÝ CSVC
+CREATE TABLE ThanhLyCSVC (
+    ThanhLyID INT IDENTITY PRIMARY KEY,
+    CSVCID INT UNIQUE,
+    NgayThanhLy DATE NOT NULL DEFAULT GETDATE(),
+    LyDoThanhLy NVARCHAR(500),
+    GiaTriThanhLy DECIMAL(18,2),
+    NguoiThucHienID INT,
+    CONSTRAINT FK_ThanhLy_CSVC FOREIGN KEY (CSVCID) REFERENCES CSVC(CSVCID) ON DELETE CASCADE,
+    CONSTRAINT FK_ThanhLy_NhanVien FOREIGN KEY (NguoiThucHienID) REFERENCES NhanVien(NhanVienID) ON DELETE SET NULL,
+    CONSTRAINT CK_ThanhLy_GiaTri CHECK (GiaTriThanhLy >= 0)
+);
+GO

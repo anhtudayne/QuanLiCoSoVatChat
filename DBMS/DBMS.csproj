@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DBMS</RootNamespace>
+    <AssemblyName>DBMS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyNhanVienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyNhanVienForm.Designer.cs">
+      <DependentUpon>QuanLyNhanVienForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCSVCForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyCSVCForm.Designer.cs">
+      <DependentUpon>QuanLyCSVCForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhanCongCaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhanCongCaForm.Designer.cs">
+      <DependentUpon>PhanCongCaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoTriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoTriForm.Designer.cs">
+      <DependentUpon>BaoTriForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThanhLyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThanhLyForm.Designer.cs">
+      <DependentUpon>ThanhLyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoForm.Designer.cs">
+      <DependentUpon>BaoCaoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployeeForm.Designer.cs">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeOverviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeOverviewForm.Designer.cs">
+      <DependentUpon>EmployeeOverviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalaryReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalaryReportForm.Designer.cs">
+      <DependentUpon>SalaryReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddShiftForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddShiftForm.Designer.cs">
+      <DependentUpon>AddShiftForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditShiftForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditShiftForm.Designer.cs">
+      <DependentUpon>EditShiftForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEmployeeForm.Designer.cs">
+      <DependentUpon>EditEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchEmployeeForm.Designer.cs">
+      <DependentUpon>SearchEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSalaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSalaryForm.Designer.cs">
+      <DependentUpon>ViewSalaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="QuanLyNhanVienForm.resx">
+      <DependentUpon>QuanLyNhanVienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEmployeeForm.resx">
+      <DependentUpon>EditEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchEmployeeForm.resx">
+      <DependentUpon>SearchEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSalaryForm.resx">
+      <DependentUpon>ViewSalaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
