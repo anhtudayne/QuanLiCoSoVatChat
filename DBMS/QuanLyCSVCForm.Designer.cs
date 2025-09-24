@@ -35,6 +35,7 @@ namespace DBMS
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.btnTongQuan = new System.Windows.Forms.Button();
             this.dgvCSVC = new System.Windows.Forms.DataGridView();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCSVC)).BeginInit();
@@ -48,7 +49,7 @@ namespace DBMS
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(950, 60);
+            this.lblTitle.Size = new System.Drawing.Size(1000, 60);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "🏢 QUẢN LÝ CƠ SỞ VẬT CHẤT";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -61,10 +62,11 @@ namespace DBMS
             this.panelTop.Controls.Add(this.btnXoa);
             this.panelTop.Controls.Add(this.btnSua);
             this.panelTop.Controls.Add(this.btnThem);
+            this.panelTop.Controls.Add(this.btnTongQuan);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 60);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(950, 80);
+            this.panelTop.Size = new System.Drawing.Size(1000, 80);
             this.panelTop.TabIndex = 1;
             // 
             // btnLamMoi
@@ -74,10 +76,10 @@ namespace DBMS
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.Location = new System.Drawing.Point(720, 20);
+            this.btnLamMoi.Location = new System.Drawing.Point(750, 20);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(120, 40);
-            this.btnLamMoi.TabIndex = 4;
+            this.btnLamMoi.TabIndex = 5;
             this.btnLamMoi.Text = "🔄 Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
@@ -89,10 +91,10 @@ namespace DBMS
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(570, 20);
+            this.btnTimKiem.Location = new System.Drawing.Point(600, 20);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(120, 40);
-            this.btnTimKiem.TabIndex = 3;
+            this.btnTimKiem.TabIndex = 4;
             this.btnTimKiem.Text = "🔍 Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
@@ -104,10 +106,10 @@ namespace DBMS
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(420, 20);
+            this.btnXoa.Location = new System.Drawing.Point(450, 20);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(120, 40);
-            this.btnXoa.TabIndex = 2;
+            this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "❌ Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -119,13 +121,28 @@ namespace DBMS
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Black;
-            this.btnSua.Location = new System.Drawing.Point(270, 20);
+            this.btnSua.Location = new System.Drawing.Point(300, 20);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(120, 40);
-            this.btnSua.TabIndex = 1;
+            this.btnSua.TabIndex = 2;
             this.btnSua.Text = "✏️ Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnTongQuan
+            // 
+            this.btnTongQuan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(66)))), ((int)(((byte)(193)))));
+            this.btnTongQuan.FlatAppearance.BorderSize = 0;
+            this.btnTongQuan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTongQuan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTongQuan.ForeColor = System.Drawing.Color.White;
+            this.btnTongQuan.Location = new System.Drawing.Point(20, 20);
+            this.btnTongQuan.Name = "btnTongQuan";
+            this.btnTongQuan.Size = new System.Drawing.Size(120, 40);
+            this.btnTongQuan.TabIndex = 0;
+            this.btnTongQuan.Text = "📊 Tổng quan";
+            this.btnTongQuan.UseVisualStyleBackColor = false;
+            this.btnTongQuan.Click += new System.EventHandler(this.btnTongQuan_Click);
             // 
             // btnThem
             // 
@@ -134,10 +151,10 @@ namespace DBMS
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(120, 20);
+            this.btnThem.Location = new System.Drawing.Point(150, 20);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(120, 40);
-            this.btnThem.TabIndex = 0;
+            this.btnThem.TabIndex = 1;
             this.btnThem.Text = "➕ Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -155,7 +172,7 @@ namespace DBMS
             this.dgvCSVC.RowHeadersWidth = 51;
             this.dgvCSVC.RowTemplate.Height = 24;
             this.dgvCSVC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCSVC.Size = new System.Drawing.Size(950, 460);
+            this.dgvCSVC.Size = new System.Drawing.Size(1000, 460);
             this.dgvCSVC.TabIndex = 2;
             // 
             // QuanLyCSVCForm
@@ -163,7 +180,7 @@ namespace DBMS
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(950, 600);
+            this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.dgvCSVC);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.lblTitle);
@@ -181,6 +198,7 @@ namespace DBMS
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.Button btnTongQuan;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;

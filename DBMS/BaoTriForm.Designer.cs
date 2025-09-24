@@ -59,7 +59,7 @@ namespace DBMS
             this.btnLichBaoTri.ForeColor = System.Drawing.Color.White;
             this.btnLichBaoTri.Location = new System.Drawing.Point(420, 20);
             this.btnLichBaoTri.Name = "btnLichBaoTri";
-            this.btnLichBaoTri.Size = new System.Drawing.Size(150, 40);
+            this.btnLichBaoTri.Size = new System.Drawing.Size(139, 40);
             this.btnLichBaoTri.TabIndex = 2;
             this.btnLichBaoTri.Text = "📅 Lịch bảo trì";
             this.btnLichBaoTri.UseVisualStyleBackColor = false;
@@ -127,6 +127,7 @@ namespace DBMS
             this.panelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoTri)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Label lblTitle;

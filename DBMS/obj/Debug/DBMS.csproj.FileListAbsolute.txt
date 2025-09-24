@@ -12,3 +12,7 @@ C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.QuanLyNhanVienForm.resource
 C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.EditEmployeeForm.resources
 C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.SearchEmployeeForm.resources
 C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.ViewSalaryForm.resources
+C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.AddCSVCForm.resources
+C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.EditCSVCForm.resources
+C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.SearchCSVCForm.resources
+C:\Users\admin\source\repos\DBMS\DBMS\obj\Debug\DBMS.BaoTriForm.resources
