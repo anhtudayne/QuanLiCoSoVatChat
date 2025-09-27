@@ -167,13 +167,13 @@ BEGIN
             -- Kiểm tra lịch sử bảo trì
             IF EXISTS(SELECT 1 FROM LichSuBaoTri WHERE CSVCID = @CSVCID)
             BEGIN
-                RAISERROR(N'Không thể xóa CSVC đã có lịch sử bảo trì. Sử dụng @ForceDelete = 1 để xóa cưỡng bức.', 16, 1);
+                RAISERROR(N'Không thể xóa CSVC đã có lịch sử bảo trì. ', 16, 1);
                 RETURN;
             END
             -- Kiểm tra đã thanh lý
             IF EXISTS(SELECT 1 FROM ThanhLyCSVC WHERE CSVCID = @CSVCID)
             BEGIN
-                RAISERROR(N'Không thể xóa CSVC đã được thanh lý. Sử dụng @ForceDelete = 1 để xóa cưỡng bức.', 16, 1);
+                RAISERROR(N'Không thể xóa CSVC đã được thanh lý', 16, 1);
                 RETURN;
             END
         END

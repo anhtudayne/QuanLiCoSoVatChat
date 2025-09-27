@@ -144,8 +144,11 @@ RETURNS TABLE
 AS
 RETURN
 (
-    SELECT DISTINCT
-        TinhTrang,
-        TinhTrang AS DisplayText
-    FROM CSVC
+    SELECT TinhTrang, TinhTrang AS DisplayText
+    FROM (VALUES 
+        (N'Đang sử dụng'),
+        (N'Bảo trì'),
+        (N'Hỏng'),
+        (N'Đã thanh lý')
+    ) AS Statuses(TinhTrang)
 );

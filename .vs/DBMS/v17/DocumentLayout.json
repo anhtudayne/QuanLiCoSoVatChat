@@ -3,15 +3,35 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\DBMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|c:\\users\\admin\\source\\repos\\dbms\\dbms\\searchcsvcform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|solutionrelative:dbms\\searchcsvcform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|c:\\users\\admin\\source\\repos\\dbms\\dbms\\staffmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|solutionrelative:dbms\\staffmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|c:\\users\\admin\\source\\repos\\dbms\\dbms\\technicalmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|solutionrelative:dbms\\technicalmainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|c:\\users\\admin\\source\\repos\\dbms\\dbms\\thanhlyform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|solutionrelative:dbms\\thanhlyform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|C:\\Users\\admin\\source\\repos\\DBMS\\dbms\\baotriform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|solutionrelative:dbms\\baotriform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|c:\\users\\admin\\source\\repos\\dbms\\dbms\\addshiftform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|C:\\Users\\admin\\source\\repos\\DBMS\\dbms\\searchmaintenanceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|solutionrelative:dbms\\searchmaintenanceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|C:\\Users\\admin\\source\\repos\\DBMS\\dbms\\searchcsvcform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|solutionrelative:dbms\\searchcsvcform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|C:\\Users\\admin\\source\\repos\\DBMS\\dbms\\updatemaintenanceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|solutionrelative:dbms\\updatemaintenanceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|C:\\Users\\admin\\source\\repos\\DBMS\\dbms\\addshiftform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|solutionrelative:dbms\\addshiftform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -27,7 +47,7 @@
       "RelativeMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|solutionrelative:dbms\\quanlycsvcform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|c:\\users\\admin\\source\\repos\\dbms\\dbms\\salaryreportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|C:\\Users\\admin\\source\\repos\\DBMS\\dbms\\salaryreportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|solutionrelative:dbms\\salaryreportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -41,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|C:\\Users\\admin\\source\\repos\\DBMS\\dbms\\phancongcaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|solutionrelative:dbms\\phancongcaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|C:\\Users\\admin\\source\\repos\\DBMS\\dbms\\thanhlyform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|solutionrelative:dbms\\thanhlyform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C59386C9-D7C7-4DBD-A0CB-7BC3F0FCB820}|DBMS\\DBMS.csproj|C:\\Users\\admin\\source\\repos\\DBMS\\dbms\\searchemployeeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -119,90 +135,142 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "StaffMainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\StaffMainForm.cs",
+              "RelativeDocumentMoniker": "DBMS\\StaffMainForm.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\StaffMainForm.cs [Design]",
+              "RelativeToolTip": "DBMS\\StaffMainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T19:50:46.777Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TechnicalMainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\TechnicalMainForm.cs",
+              "RelativeDocumentMoniker": "DBMS\\TechnicalMainForm.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\TechnicalMainForm.cs [Design]",
+              "RelativeToolTip": "DBMS\\TechnicalMainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T19:49:25.708Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "SearchCSVCForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\SearchCSVCForm.cs",
               "RelativeDocumentMoniker": "DBMS\\SearchCSVCForm.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\SearchCSVCForm.cs [Design]",
               "RelativeToolTip": "DBMS\\SearchCSVCForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T15:02:59.035Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-09-23T15:02:59.035Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AddShiftForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\AddShiftForm.cs",
-              "RelativeDocumentMoniker": "DBMS\\AddShiftForm.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\AddShiftForm.cs [Design]",
-              "RelativeToolTip": "DBMS\\AddShiftForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T14:52:44.913Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "QuanLyCSVCForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\QuanLyCSVCForm.cs",
               "RelativeDocumentMoniker": "DBMS\\QuanLyCSVCForm.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\QuanLyCSVCForm.cs [Design]",
               "RelativeToolTip": "DBMS\\QuanLyCSVCForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T09:13:06.891Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-09-21T09:13:06.891Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "EmployeeOverviewForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\EmployeeOverviewForm.cs",
               "RelativeDocumentMoniker": "DBMS\\EmployeeOverviewForm.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\EmployeeOverviewForm.cs [Design]",
               "RelativeToolTip": "DBMS\\EmployeeOverviewForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T10:17:31.338Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-09-22T10:17:31.338Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "BaoTriForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\BaoTriForm.cs",
               "RelativeDocumentMoniker": "DBMS\\BaoTriForm.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\BaoTriForm.cs [Design]",
               "RelativeToolTip": "DBMS\\BaoTriForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T09:52:59.619Z",
+              "WhenOpened": "2025-09-22T09:52:59.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ThanhLyForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\ThanhLyForm.cs",
+              "RelativeDocumentMoniker": "DBMS\\ThanhLyForm.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\ThanhLyForm.cs [Design]",
+              "RelativeToolTip": "DBMS\\ThanhLyForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-21T09:30:33.407Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SearchMaintenanceForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\SearchMaintenanceForm.cs",
+              "RelativeDocumentMoniker": "DBMS\\SearchMaintenanceForm.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\SearchMaintenanceForm.cs [Design]",
+              "RelativeToolTip": "DBMS\\SearchMaintenanceForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T13:28:07.961Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "UpdateMaintenanceForm.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\UpdateMaintenanceForm.cs",
+              "RelativeDocumentMoniker": "DBMS\\UpdateMaintenanceForm.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\UpdateMaintenanceForm.cs",
+              "RelativeToolTip": "DBMS\\UpdateMaintenanceForm.cs",
+              "ViewState": "AQIAAJ0AAAAAAAAAAAAkwEwAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T16:09:28.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddShiftForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\AddShiftForm.cs",
+              "RelativeDocumentMoniker": "DBMS\\AddShiftForm.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\AddShiftForm.cs [Design]",
+              "RelativeToolTip": "DBMS\\AddShiftForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T14:52:44.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "SalaryReportForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\SalaryReportForm.cs",
               "RelativeDocumentMoniker": "DBMS\\SalaryReportForm.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\SalaryReportForm.cs [Design]",
               "RelativeToolTip": "DBMS\\SalaryReportForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T10:49:25.194Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-09-22T10:49:25.194Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "BaoCaoForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\BaoCaoForm.cs",
               "RelativeDocumentMoniker": "DBMS\\BaoCaoForm.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\BaoCaoForm.cs [Design]",
               "RelativeToolTip": "DBMS\\BaoCaoForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-22T09:53:03.574Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-09-22T09:53:03.574Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "ViewSalaryForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\ViewSalaryForm.cs",
               "RelativeDocumentMoniker": "DBMS\\ViewSalaryForm.cs",
@@ -213,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "PhanCongCaForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\PhanCongCaForm.cs",
               "RelativeDocumentMoniker": "DBMS\\PhanCongCaForm.cs",
@@ -224,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "QuanLyNhanVienForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\QuanLyNhanVienForm.cs",
               "RelativeDocumentMoniker": "DBMS\\QuanLyNhanVienForm.cs",
@@ -235,18 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ThanhLyForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\ThanhLyForm.cs",
-              "RelativeDocumentMoniker": "DBMS\\ThanhLyForm.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\ThanhLyForm.cs [Design]",
-              "RelativeToolTip": "DBMS\\ThanhLyForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-21T09:30:33.407Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "SearchEmployeeForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\SearchEmployeeForm.cs",
               "RelativeDocumentMoniker": "DBMS\\SearchEmployeeForm.cs",
@@ -257,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "EditEmployeeForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\EditEmployeeForm.Designer.cs",
               "RelativeDocumentMoniker": "DBMS\\EditEmployeeForm.Designer.cs",
@@ -269,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "EditEmployeeForm.resx",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\EditEmployeeForm.resx",
               "RelativeDocumentMoniker": "DBMS\\EditEmployeeForm.resx",
@@ -280,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "EditEmployeeForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\EditEmployeeForm.cs",
               "RelativeDocumentMoniker": "DBMS\\EditEmployeeForm.cs",
@@ -291,7 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "QuanLyNhanVienForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\QuanLyNhanVienForm.Designer.cs",
               "RelativeDocumentMoniker": "DBMS\\QuanLyNhanVienForm.Designer.cs",
@@ -303,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "AddEmployeeForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\AddEmployeeForm.cs",
               "RelativeDocumentMoniker": "DBMS\\AddEmployeeForm.cs",
@@ -314,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\MainForm.cs",
               "RelativeDocumentMoniker": "DBMS\\MainForm.cs",
@@ -326,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\Program.cs",
               "RelativeDocumentMoniker": "DBMS\\Program.cs",
@@ -338,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\DBMS\\DBMS\\MainForm.cs",
               "RelativeDocumentMoniker": "DBMS\\MainForm.cs",

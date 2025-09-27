@@ -5,9 +5,9 @@ GO
 -- TRIGGERS CHO QUẢN LÝ CƠ SỞ VẬT CHẤT
 -- =============================================
 
--- 1. TRIGGER TỰ ĐỘNG TẠO LỊCH BẢO TRÌ ĐỊNH KỲ SAU KHI THÊM CSVC
-CREATE OR ALTER TRIGGER tr_CSVC_AfterInsert
-ON CSVC
+-- 1. TRIGGER TỰ ĐỘNG TẠO LỊCH BẢO TRÌ ĐỊNH KỲ SAU KHI THÊM THÔNG TIN SỬ DỤNG
+CREATE OR ALTER TRIGGER tr_ThongTinSuDung_AfterInsert
+ON ThongTinSuDung
 AFTER INSERT
 AS
 BEGIN
@@ -23,17 +23,17 @@ BEGIN
                 WHEN l.TenLoai LIKE N'%Nội thất%' THEN 12      -- 12 tháng cho nội thất
                 WHEN l.TenLoai LIKE N'%Văn phòng%' THEN 3      -- 3 tháng cho thiết bị văn phòng
                 ELSE 6                                         -- Mặc định 6 tháng
-            END,
-            GETDATE(),
-            N'Lịch bảo trì được tạo tự động khi thêm CSVC mới'
+            END AS ChuKy,
+            DATEADD(MONTH, 1, i.NgayMua) AS NgayBatDau,
+            N'Lịch bảo trì được tạo tự động khi thêm thông tin sử dụng CSVC'
         FROM inserted i
-        LEFT JOIN LoaiCSVC l ON i.LoaiID = l.LoaiID
-        WHERE i.TinhTrang != N'Đã thanh lý';  -- Không tạo lịch cho CSVC đã thanh lý
+        INNER JOIN CSVC c ON i.CSVCID = c.CSVCID
+        LEFT JOIN LoaiCSVC l ON c.LoaiID = l.LoaiID
+        WHERE c.TinhTrang != N'Đã thanh lý'  -- Không tạo lịch cho CSVC đã thanh lý
+          AND NOT EXISTS (SELECT 1 FROM LichBaoTri WHERE CSVCID = i.CSVCID); -- Không tạo trùng
         
     END TRY
     BEGIN CATCH
-        -- Ghi log lỗi nhưng không rollback việc insert CSVC
-        PRINT N'Lỗi khi tạo lịch bảo trì tự động: ' + ERROR_MESSAGE();
     END CATCH
 END
 GO

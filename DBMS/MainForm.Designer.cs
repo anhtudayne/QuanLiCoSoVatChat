@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnLichSu = new System.Windows.Forms.Button();
             this.btnBaoCao = new System.Windows.Forms.Button();
             this.btnThanhLy = new System.Windows.Forms.Button();
             this.btnBaoTri = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.panelMenu.Controls.Add(this.btnLichSu);
             this.panelMenu.Controls.Add(this.btnBaoCao);
             this.panelMenu.Controls.Add(this.btnThanhLy);
             this.panelMenu.Controls.Add(this.btnBaoTri);
@@ -65,15 +67,32 @@
             this.btnBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBaoCao.ForeColor = System.Drawing.Color.White;
-            this.btnBaoCao.Location = new System.Drawing.Point(0, 420);
+            this.btnBaoCao.Location = new System.Drawing.Point(0, 480);
             this.btnBaoCao.Name = "btnBaoCao";
             this.btnBaoCao.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnBaoCao.Size = new System.Drawing.Size(250, 60);
-            this.btnBaoCao.TabIndex = 6;
+            this.btnBaoCao.TabIndex = 7;
             this.btnBaoCao.Text = "📊 Báo cáo - Thống kê";
             this.btnBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBaoCao.UseVisualStyleBackColor = false;
             this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
+            // 
+            // btnLichSu
+            // 
+            this.btnLichSu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnLichSu.FlatAppearance.BorderSize = 0;
+            this.btnLichSu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLichSu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLichSu.ForeColor = System.Drawing.Color.White;
+            this.btnLichSu.Location = new System.Drawing.Point(0, 420);
+            this.btnLichSu.Name = "btnLichSu";
+            this.btnLichSu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLichSu.Size = new System.Drawing.Size(250, 60);
+            this.btnLichSu.TabIndex = 6;
+            this.btnLichSu.Text = "📋 Lịch sử sự kiện";
+            this.btnLichSu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLichSu.UseVisualStyleBackColor = false;
+            this.btnLichSu.Click += new System.EventHandler(this.btnLichSu_Click);
             // 
             // btnThanhLy
             // 
@@ -226,6 +245,7 @@
         private System.Windows.Forms.Button btnBaoTri;
         private System.Windows.Forms.Button btnThanhLy;
         private System.Windows.Forms.Button btnBaoCao;
+        private System.Windows.Forms.Button btnLichSu;
         private System.Windows.Forms.Label lblWelcome;
     }
 }

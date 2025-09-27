@@ -17,7 +17,9 @@ namespace DBMS
         {
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.btnLichBaoTri = new System.Windows.Forms.Button();
+            this.btnThongKe = new System.Windows.Forms.Button();
+            this.btnLichDinhKy = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThemBaoTri = new System.Windows.Forms.Button();
             this.dgvBaoTri = new System.Windows.Forms.DataGridView();
@@ -41,7 +43,9 @@ namespace DBMS
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.panelTop.Controls.Add(this.btnLichBaoTri);
+            this.panelTop.Controls.Add(this.btnThongKe);
+            this.panelTop.Controls.Add(this.btnLichDinhKy);
+            this.panelTop.Controls.Add(this.btnTimKiem);
             this.panelTop.Controls.Add(this.btnCapNhat);
             this.panelTop.Controls.Add(this.btnThemBaoTri);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
@@ -50,20 +54,50 @@ namespace DBMS
             this.panelTop.Size = new System.Drawing.Size(950, 80);
             this.panelTop.TabIndex = 1;
             // 
-            // btnLichBaoTri
+            // btnThongKe
             // 
-            this.btnLichBaoTri.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btnLichBaoTri.FlatAppearance.BorderSize = 0;
-            this.btnLichBaoTri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLichBaoTri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLichBaoTri.ForeColor = System.Drawing.Color.White;
-            this.btnLichBaoTri.Location = new System.Drawing.Point(420, 20);
-            this.btnLichBaoTri.Name = "btnLichBaoTri";
-            this.btnLichBaoTri.Size = new System.Drawing.Size(139, 40);
-            this.btnLichBaoTri.TabIndex = 2;
-            this.btnLichBaoTri.Text = "📅 Lịch bảo trì";
-            this.btnLichBaoTri.UseVisualStyleBackColor = false;
-            this.btnLichBaoTri.Click += new System.EventHandler(this.btnLichBaoTri_Click);
+            this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.btnThongKe.FlatAppearance.BorderSize = 0;
+            this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.ForeColor = System.Drawing.Color.White;
+            this.btnThongKe.Location = new System.Drawing.Point(480, 20);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(120, 40);
+            this.btnThongKe.TabIndex = 3;
+            this.btnThongKe.Text = "📊 Thống kê";
+            this.btnThongKe.UseVisualStyleBackColor = false;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            // 
+            // btnLichDinhKy
+            // 
+            this.btnLichDinhKy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnLichDinhKy.FlatAppearance.BorderSize = 0;
+            this.btnLichDinhKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLichDinhKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLichDinhKy.ForeColor = System.Drawing.Color.White;
+            this.btnLichDinhKy.Location = new System.Drawing.Point(630, 20);
+            this.btnLichDinhKy.Name = "btnLichDinhKy";
+            this.btnLichDinhKy.Size = new System.Drawing.Size(150, 40);
+            this.btnLichDinhKy.TabIndex = 4;
+            this.btnLichDinhKy.Text = "📅 Lịch định kỳ";
+            this.btnLichDinhKy.UseVisualStyleBackColor = false;
+            this.btnLichDinhKy.Click += new System.EventHandler(this.btnLichDinhKy_Click);
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Location = new System.Drawing.Point(320, 20);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(120, 40);
+            this.btnTimKiem.TabIndex = 2;
+            this.btnTimKiem.Text = "� Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnCapNhat
             // 
@@ -72,9 +106,9 @@ namespace DBMS
             this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCapNhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.ForeColor = System.Drawing.Color.Black;
-            this.btnCapNhat.Location = new System.Drawing.Point(240, 20);
+            this.btnCapNhat.Location = new System.Drawing.Point(170, 20);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(150, 40);
+            this.btnCapNhat.Size = new System.Drawing.Size(120, 40);
             this.btnCapNhat.TabIndex = 1;
             this.btnCapNhat.Text = "✏️ Cập nhật";
             this.btnCapNhat.UseVisualStyleBackColor = false;
@@ -87,9 +121,9 @@ namespace DBMS
             this.btnThemBaoTri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemBaoTri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemBaoTri.ForeColor = System.Drawing.Color.White;
-            this.btnThemBaoTri.Location = new System.Drawing.Point(60, 20);
+            this.btnThemBaoTri.Location = new System.Drawing.Point(20, 20);
             this.btnThemBaoTri.Name = "btnThemBaoTri";
-            this.btnThemBaoTri.Size = new System.Drawing.Size(150, 40);
+            this.btnThemBaoTri.Size = new System.Drawing.Size(120, 40);
             this.btnThemBaoTri.TabIndex = 0;
             this.btnThemBaoTri.Text = "➕ Thêm bảo trì";
             this.btnThemBaoTri.UseVisualStyleBackColor = false;
@@ -134,7 +168,9 @@ namespace DBMS
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Button btnThemBaoTri;
         private System.Windows.Forms.Button btnCapNhat;
-        private System.Windows.Forms.Button btnLichBaoTri;
+        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button btnThongKe;
+        private System.Windows.Forms.Button btnLichDinhKy;
         private System.Windows.Forms.DataGridView dgvBaoTri;
     }
 }

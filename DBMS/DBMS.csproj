@@ -88,6 +88,30 @@
     <Compile Include="BaoCaoForm.Designer.cs">
       <DependentUpon>BaoCaoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LichSuSuKienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LichSuSuKienForm.Designer.cs">
+      <DependentUpon>LichSuSuKienForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TechnicalMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TechnicalMainForm.Designer.cs">
+      <DependentUpon>TechnicalMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffMainForm.Designer.cs">
+      <DependentUpon>StaffMainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +178,60 @@
     <Compile Include="SearchCSVCForm.Designer.cs">
       <DependentUpon>SearchCSVCForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddMaintenanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMaintenanceForm.Designer.cs">
+      <DependentUpon>AddMaintenanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMaintenanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateMaintenanceForm.Designer.cs">
+      <DependentUpon>UpdateMaintenanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchMaintenanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchMaintenanceForm.Designer.cs">
+      <DependentUpon>SearchMaintenanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceStatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintenanceStatisticsForm.Designer.cs">
+      <DependentUpon>MaintenanceStatisticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LichBaoTriDinhKyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LichBaoTriDinhKyForm.Designer.cs">
+      <DependentUpon>LichBaoTriDinhKyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectCSVCForDisposalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCSVCForDisposalForm.Designer.cs">
+      <DependentUpon>SelectCSVCForDisposalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDisposalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDisposalForm.Designer.cs">
+      <DependentUpon>AddDisposalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchThanhLyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchThanhLyForm.Designer.cs">
+      <DependentUpon>SearchThanhLyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateThanhLyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateThanhLyForm.Designer.cs">
+      <DependentUpon>UpdateThanhLyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BaoTriForm.resx">
@@ -179,6 +257,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SearchEmployeeForm.resx">
       <DependentUpon>SearchEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchMaintenanceForm.resx">
+      <DependentUpon>SearchMaintenanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThanhLyForm.resx">
+      <DependentUpon>ThanhLyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewSalaryForm.resx">
       <DependentUpon>ViewSalaryForm.cs</DependentUpon>

@@ -68,6 +68,7 @@ namespace DBMS
             btnQuanLyCSVC.BackColor = Color.FromArgb(51, 51, 76);
             btnBaoTri.BackColor = Color.FromArgb(51, 51, 76);
             btnThanhLy.BackColor = Color.FromArgb(51, 51, 76);
+            btnLichSu.BackColor = Color.FromArgb(51, 51, 76);
             btnBaoCao.BackColor = Color.FromArgb(51, 51, 76);
         }
 
@@ -112,5 +113,12 @@ namespace DBMS
             SetActiveButton(btnBaoCao);
             OpenChildForm(new BaoCaoForm());
         }
+
+        private void btnLichSu_Click(object sender, EventArgs e)
+        {
+            SetActiveButton(btnLichSu);
+            OpenChildForm(new LichSuSuKienForm());
+        }
     }
 }
+
