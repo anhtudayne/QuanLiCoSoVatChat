@@ -112,6 +112,18 @@
     <Compile Include="StaffMainForm.Designer.cs">
       <DependentUpon>StaffMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonalInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonalInfoForm.Designer.cs">
+      <DependentUpon>PersonalInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountManagementForm.Designer.cs">
+      <DependentUpon>AccountManagementForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>

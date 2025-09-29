@@ -1,4 +1,6 @@
 using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -6,9 +8,8 @@ namespace DBMS
 {
     public partial class LoginForm : Form
     {
-        // Tài khoản mặc định đơn giản (có thể mở rộng với database sau)
-        private const string DEFAULT_USERNAME = "admin";
-        private const string DEFAULT_PASSWORD = "123456";
+        // Connection string cho việc kiểm tra đăng nhập (dùng admin quyền)
+        private string adminConnectionString = "Data Source=.;Initial Catalog=vc;Integrated Security=True;";
         
         public LoginForm()
         {
@@ -48,19 +49,109 @@ namespace DBMS
                 return;
             }
 
-            // Kiểm tra thông tin đăng nhập
-            if (username.Equals(DEFAULT_USERNAME, StringComparison.OrdinalIgnoreCase) && 
-                password == DEFAULT_PASSWORD)
+            // Kiểm tra thông tin đăng nhập bằng SQL function
+            try
             {
-                this.DialogResult = DialogResult.OK;
+                string userRole = CheckLoginAndGetRole(username, password);
+                
+                if (userRole == "Sai username hoặc password")
+                {
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác!", "Lỗi đăng nhập", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtPassword.Clear();
+                    txtUsername.Focus();
+                    return;
+                }
+                
+                if (userRole == "User này không có role nào")
+                {
+                    MessageBox.Show("Tài khoản của bạn chưa được phân quyền!", "Lỗi phân quyền", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Đăng nhập thành công - mở form theo vai trò
+                this.Hide();
+                OpenFormByRole(userRole, username);
                 this.Close();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác!", "Lỗi đăng nhập", 
+                MessageBox.Show($"Lỗi kết nối cơ sở dữ liệu: {ex.Message}", "Lỗi", 
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtPassword.Clear();
-                txtUsername.Focus();
+            }
+        }
+
+        private string CheckLoginAndGetRole(string username, string password)
+        {
+            using (SqlConnection conn = new SqlConnection(adminConnectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("SELECT dbo.fn_LoginAndGetRole(@username, @password)", conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
+                    
+                    object result = cmd.ExecuteScalar();
+                    return result?.ToString() ?? "Lỗi không xác định";
+                }
+            }
+        }
+
+        private void OpenFormByRole(string role, string username)
+        {
+            // Tạo connection string riêng cho user với SQL Server Authentication
+            string userConnectionString = CreateUserConnectionString(username);
+            Form targetForm = null;
+            
+            switch (role)
+            {
+                case "QuanLyRole":
+                    targetForm = new MainForm(userConnectionString);
+                    break;
+                    
+                case "KyThuatRole":
+                    targetForm = new TechnicalMainForm(userConnectionString, username);
+                    break;
+                    
+                case "NhanVienTrucRole":
+                    targetForm = new StaffMainForm(userConnectionString, username);
+                    break;
+                    
+                default:
+                    MessageBox.Show($"Vai trò không được hỗ trợ: {role}", "Lỗi", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+            }
+
+            if (targetForm != null)
+            {
+                // Có thể truyền thông tin user vào form nếu cần
+                targetForm.Text += $" - Đăng nhập bởi: {username}";
+                targetForm.ShowDialog();
+            }
+        }
+
+        private string CreateUserConnectionString(string username)
+        {
+            // Lấy password từ database để tạo connection string
+            string password = GetUserPassword(username);
+            
+            // Tạo connection string với SQL Server Authentication
+            return $"Data Source=.;Initial Catalog=vc;User ID={username};Password={password};";
+        }
+
+        private string GetUserPassword(string username)
+        {
+            using (SqlConnection conn = new SqlConnection(adminConnectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("SELECT Password FROM TaiKhoan WHERE Username = @username", conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                    object result = cmd.ExecuteScalar();
+                    return result?.ToString() ?? "";
+                }
             }
         }
 

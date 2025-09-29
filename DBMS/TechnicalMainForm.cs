@@ -7,10 +7,25 @@ namespace DBMS
     public partial class TechnicalMainForm : Form
     {
         private Form currentChildForm;
+        private string connectionString;
+        private string username;
 
-        public TechnicalMainForm()
+        // Constructor mới nhận connection string và username
+        public TechnicalMainForm(string connString, string user)
         {
             InitializeComponent();
+            connectionString = connString;
+            username = user;
+        }
+
+        // Constructor với chỉ connection string để backward compatibility
+        public TechnicalMainForm(string connString) : this(connString, "")
+        {
+        }
+
+        // Constructor cũ để backward compatibility
+        public TechnicalMainForm() : this("Data Source=.;Initial Catalog=vc;Integrated Security=True;", "")
+        {
         }
 
         private void TechnicalMainForm_Load(object sender, EventArgs e)
@@ -60,6 +75,7 @@ namespace DBMS
             btnXemCSVC.BackColor = Color.FromArgb(51, 51, 76);
             btnBaoTri.BackColor = Color.FromArgb(51, 51, 76);
             btnLichBaoTriDinhKy.BackColor = Color.FromArgb(51, 51, 76);
+            btnThongTinCaNhan.BackColor = Color.FromArgb(51, 51, 76);
         }
 
         private void SetActiveButton(Button activeButton)
@@ -88,6 +104,27 @@ namespace DBMS
             // OpenChildForm(new LichBaoTriDinhKyForm());
             MessageBox.Show("Chức năng đang được phát triển!", "Thông báo", 
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnThongTinCaNhan_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(username))
+            {
+                MessageBox.Show("Không tìm thấy thông tin người dùng!", "Lỗi", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                PersonalInfoForm personalForm = new PersonalInfoForm(connectionString, username);
+                personalForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi mở thông tin cá nhân: {ex.Message}", "Lỗi", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -17,16 +17,8 @@ namespace DBMS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            // Hiển thị form đăng nhập trước
-            using (var loginForm = new LoginForm())
-            {
-                if (loginForm.ShowDialog() == DialogResult.OK)
-                {
-                    // Nếu đăng nhập thành công, mở MainForm
-                    Application.Run(new MainForm());
-                }
-                // Nếu hủy đăng nhập hoặc thất bại, thoát ứng dụng
-            }
+            // Hiển thị form đăng nhập - điều hướng đã được xử lý trong LoginForm
+            Application.Run(new LoginForm());
         }
     }
 }

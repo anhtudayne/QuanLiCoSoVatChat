@@ -13,10 +13,18 @@ namespace DBMS
     public partial class MainForm : Form
     {
         private Form currentChildForm;
+        private string connectionString;
 
-        public MainForm()
+        // Constructor mới nhận connection string
+        public MainForm(string connString)
         {
             InitializeComponent();
+            connectionString = connString;
+        }
+
+        // Constructor cũ để backward compatibility  
+        public MainForm() : this("Data Source=.;Initial Catalog=vc;Integrated Security=True;")
+        {
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -68,6 +76,7 @@ namespace DBMS
             btnQuanLyCSVC.BackColor = Color.FromArgb(51, 51, 76);
             btnBaoTri.BackColor = Color.FromArgb(51, 51, 76);
             btnThanhLy.BackColor = Color.FromArgb(51, 51, 76);
+            btnQuanLyTaiKhoan.BackColor = Color.FromArgb(51, 51, 76);
             btnLichSu.BackColor = Color.FromArgb(51, 51, 76);
             btnBaoCao.BackColor = Color.FromArgb(51, 51, 76);
         }
@@ -118,6 +127,12 @@ namespace DBMS
         {
             SetActiveButton(btnLichSu);
             OpenChildForm(new LichSuSuKienForm());
+        }
+
+        private void btnQuanLyTaiKhoan_Click(object sender, EventArgs e)
+        {
+            SetActiveButton(btnQuanLyTaiKhoan);
+            OpenChildForm(new AccountManagementForm());
         }
     }
 }

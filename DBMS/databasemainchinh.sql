@@ -143,3 +143,129 @@ CREATE TABLE LichSuSuKien (
     NoiDung NVARCHAR(500) NOT NULL
 );
 GO
+
+-- 12. BẢNG TÀI KHOẢN
+CREATE TABLE TaiKhoan (
+    TaiKhoanID INT IDENTITY PRIMARY KEY,
+    Username NVARCHAR(50) NOT NULL UNIQUE,
+    Password NVARCHAR(100) NOT NULL,
+    Role NVARCHAR(50) NOT NULL,
+    NhanVienID INT NULL,
+    CONSTRAINT FK_TaiKhoan_NhanVien FOREIGN KEY (NhanVienID) REFERENCES NhanVien(NhanVienID) ON DELETE SET NULL,
+    CONSTRAINT CK_TaiKhoan_Role CHECK (Role IN (N'Quản Lý', N'Nhân Viên Kỹ Thuật', N'Nhân Viên Trực'))
+);
+GO
+
+-- Dữ liệu mẫu cho bảng TaiKhoan
+INSERT INTO TaiKhoan (Username, Password, Role, NhanVienID) VALUES 
+(N'admin', N'123456', N'Quản Lý', NULL),  -- Admin
+(N'kythuat01', N'123456', N'Nhân Viên Kỹ Thuật', 1), -- Nhân viên kỹ thuật (NhanVienID = 1)
+(N'nhanvien01', N'123456', N'Nhân Viên Trực', 2); -- Nhân viên trực (NhanVienID = 2)
+GO
+
+-- =============================================
+-- STORED PROCEDURE QUẢN LÝ TÀI KHOẢN
+-- =============================================
+
+-- PROCEDURE THÊM TÀI KHOẢN MỚI
+CREATE OR ALTER PROCEDURE sp_AddTaiKhoan
+    @Username NVARCHAR(50),
+    @Password NVARCHAR(100),
+    @Role NVARCHAR(50),
+    @NhanVienID INT = NULL,
+    @Result INT OUTPUT,
+    @Message NVARCHAR(500) OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    BEGIN TRY
+        -- Kiểm tra username đã tồn tại chưa
+        IF EXISTS (SELECT 1 FROM TaiKhoan WHERE Username = @Username)
+        BEGIN
+            SET @Result = -1;
+            SET @Message = N'Tên đăng nhập đã tồn tại!';
+            RETURN;
+        END
+        
+        -- Kiểm tra role hợp lệ
+        IF @Role NOT IN (N'Quản Lý', N'Nhân Viên Kỹ Thuật', N'Nhân Viên Trực')
+        BEGIN
+            SET @Result = -2;
+            SET @Message = N'Vai trò không hợp lệ! Chỉ chấp nhận: Quản Lý, Nhân Viên Kỹ Thuật, Nhân Viên Trực';
+            RETURN;
+        END
+        
+        -- Kiểm tra NhanVienID nếu không phải Quản Lý
+        IF @Role != N'Quản Lý' AND @NhanVienID IS NULL
+        BEGIN
+            SET @Result = -3;
+            SET @Message = N'Nhân viên phải có NhanVienID!';
+            RETURN;
+        END
+        
+        -- Kiểm tra NhanVienID có tồn tại không (nếu được cung cấp)
+        IF @NhanVienID IS NOT NULL AND NOT EXISTS (SELECT 1 FROM NhanVien WHERE NhanVienID = @NhanVienID)
+        BEGIN
+            SET @Result = -4;
+            SET @Message = N'NhanVienID không tồn tại!';
+            RETURN;
+        END
+        
+        -- Thêm tài khoản mới
+        INSERT INTO TaiKhoan (Username, Password, Role, NhanVienID)
+        VALUES (@Username, @Password, @Role, @NhanVienID);
+        
+        SET @Result = 1;
+        SET @Message = N'Thêm tài khoản thành công!';
+        
+    END TRY
+    BEGIN CATCH
+        SET @Result = -999;
+        SET @Message = N'Lỗi: ' + ERROR_MESSAGE();
+    END CATCH
+END
+GO
+
+-- PROCEDURE RESET MẬT KHẨU
+CREATE OR ALTER PROCEDURE sp_ResetPassword
+    @Username NVARCHAR(50),
+    @NewPassword NVARCHAR(100),
+    @Result INT OUTPUT,
+    @Message NVARCHAR(500) OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    BEGIN TRY
+        -- Kiểm tra username có tồn tại không
+        IF NOT EXISTS (SELECT 1 FROM TaiKhoan WHERE Username = @Username)
+        BEGIN
+            SET @Result = -1;
+            SET @Message = N'Tên đăng nhập không tồn tại!';
+            RETURN;
+        END
+        
+        -- Kiểm tra mật khẩu mới không được rỗng
+        IF @NewPassword IS NULL OR LTRIM(RTRIM(@NewPassword)) = ''
+        BEGIN
+            SET @Result = -2;
+            SET @Message = N'Mật khẩu mới không được để trống!';
+            RETURN;
+        END
+        
+        -- Cập nhật mật khẩu mới
+        UPDATE TaiKhoan 
+        SET Password = @NewPassword 
+        WHERE Username = @Username;
+        
+        SET @Result = 1;
+        SET @Message = N'Reset mật khẩu thành công!';
+        
+    END TRY
+    BEGIN CATCH
+        SET @Result = -999;
+        SET @Message = N'Lỗi: ' + ERROR_MESSAGE();
+    END CATCH
+END
+GO

@@ -29,6 +29,7 @@ namespace DBMS
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnThongTinCaNhan = new System.Windows.Forms.Button();
             this.btnXemCaTruc = new System.Windows.Forms.Button();
             this.btnYeuCauBaoTri = new System.Windows.Forms.Button();
             this.btnXemCSVC = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@ namespace DBMS
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.panelMenu.Controls.Add(this.btnThongTinCaNhan);
             this.panelMenu.Controls.Add(this.btnXemCaTruc);
             this.panelMenu.Controls.Add(this.btnYeuCauBaoTri);
             this.panelMenu.Controls.Add(this.btnXemCSVC);
@@ -68,6 +70,23 @@ namespace DBMS
             this.btnXemCaTruc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXemCaTruc.UseVisualStyleBackColor = false;
             this.btnXemCaTruc.Click += new System.EventHandler(this.btnXemCaTruc_Click);
+            // 
+            // btnThongTinCaNhan
+            // 
+            this.btnThongTinCaNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnThongTinCaNhan.FlatAppearance.BorderSize = 0;
+            this.btnThongTinCaNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongTinCaNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongTinCaNhan.ForeColor = System.Drawing.Color.White;
+            this.btnThongTinCaNhan.Location = new System.Drawing.Point(0, 520);
+            this.btnThongTinCaNhan.Name = "btnThongTinCaNhan";
+            this.btnThongTinCaNhan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnThongTinCaNhan.Size = new System.Drawing.Size(250, 60);
+            this.btnThongTinCaNhan.TabIndex = 4;
+            this.btnThongTinCaNhan.Text = "👤 Thông tin cá nhân";
+            this.btnThongTinCaNhan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongTinCaNhan.UseVisualStyleBackColor = false;
+            this.btnThongTinCaNhan.Click += new System.EventHandler(this.btnThongTinCaNhan_Click);
             // 
             // btnYeuCauBaoTri
             // 
@@ -167,6 +186,7 @@ namespace DBMS
         private System.Windows.Forms.Button btnXemCSVC;
         private System.Windows.Forms.Button btnYeuCauBaoTri;
         private System.Windows.Forms.Button btnXemCaTruc;
+        private System.Windows.Forms.Button btnThongTinCaNhan;
         private System.Windows.Forms.Label lblWelcome;
     }
 }
